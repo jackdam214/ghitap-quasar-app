@@ -34,6 +34,7 @@ const model = [
       options: ['Jr.', 'Sr.', 'I', 'II'],
     },
     col: 6,
+    
   }
 ];
 

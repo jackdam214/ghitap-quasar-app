@@ -12,10 +12,26 @@ const routes = [
     path: '/auth',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: 'patients', component: () => import('pages/PatientsPage.vue') },
-      { path: 'appointments', component: () => import('pages/AppointmentsPage.vue') },
-      { path: 'chats', component: () => import('pages/ChatsPage.vue') },
-      { path: 'consultations', component: () => import('pages/ConsultationsPage.vue') },
+      {
+        path: 'patients',
+        component: () => import('pages/PatientsPage.vue'),
+        name: 'Patients',
+      },
+      {
+        path: 'appointments',
+        component: () => import('pages/AppointmentsPage.vue'),
+        name: 'Appointments',
+      },
+      {
+        path: 'chats',
+        component: () => import('pages/ChatsPage.vue'),
+        name: 'Chats',
+      },
+      {
+        path: 'consultations',
+        component: () => import('pages/ConsultationsPage.vue'),
+        name: 'Consultations',
+      },
     ]
   },
 

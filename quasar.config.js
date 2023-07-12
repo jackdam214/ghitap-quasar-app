@@ -75,7 +75,8 @@ module.exports = configure(function (/* ctx */) {
         FIREBASE_PROJECT_ID: "ghitap-jbaquino3",
         FIREBASE_STORAGE_BUCKET: "ghitap-jbaquino3.appspot.com",
         FIREBASE_MESSAGING_SENDER_ID: "750282929504",
-        FIREBASE_APP_ID: "1:750282929504:web:be04e0610c59e46696da05"
+        FIREBASE_APP_ID: "1:750282929504:web:be04e0610c59e46696da05",
+        API_URL: "http://localhost:8000"
       },
       // rawDefine: {}
       // ignorePublicFolder: true,
@@ -107,11 +108,7 @@ module.exports = configure(function (/* ctx */) {
       proxy: {
         // proxy all requests starting with /api to jsonplaceholder
         '/api': {
-          target: 'http://some.api.target.com:7070',
-          changeOrigin: true,
-          pathRewrite: {
-            '^/api': ''
-          }
+          target: 'http://localhost:8000',
         }
       }
     },
